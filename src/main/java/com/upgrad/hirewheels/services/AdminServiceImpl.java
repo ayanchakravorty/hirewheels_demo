@@ -39,6 +39,7 @@ public class AdminServiceImpl implements AdminService {
   @Override
   public Vehicle registerVehicle(Vehicle vehicle) throws Exception {
     boolean testVehicleNumber = vehicleDao.existsByVehicleNumber(vehicle.getVehicleNumber());
+    System.out.println("Ayan " + testVehicleNumber);
     if (testVehicleNumber) {
       System.out.println("Vehicle Number Already Exists");
     }
